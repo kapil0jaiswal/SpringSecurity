@@ -1,11 +1,12 @@
 # Spring security 
 
-Securing your Web application
+Spring Security is a powerful and highly customizable authentication and access-control framework. 
+It is the de-facto standard for securing Spring-based applications.
+Spring Security is a framework that focuses on providing both authentication and authorization to Java applications. 
+the real power of Spring Security is found in how easily it can be extended to meet custom requirements
+with the help of Spring Dependencies
 
-Pre configured Security options with minimal 
-
-
-Handles Common Vulnerbality
+It Handles Common Vulnerbality out of the box
 
 - session fixation
 - clickJacking
@@ -31,18 +32,45 @@ Handles Common Vulnerbality
  
 ## **Authentication**
 
+User Authentication For any Web application which can be configured for validating the correct user name and password
+and various type of authentication are available such as 
+LdapAuthentication
+DaoAuthentication
+inMemoryAuthentication
+and more
+
 ## **Authorization**
 
+Levels of Access In different end points can be controlled in Spring Boot with differentiating in Users providing them roles 
+just Like Admin is a Role 
+ 
+
+
 ## **Principal**
+Currently Logged in User . Application Remembers the currently Logged in User with there information Stored in runtime refered as Principal .
+
 
 ## **Granted Authority**
 
+Permissions Given To Users For Specific Requests/operation In the application which can be configured In a List of Auuthorities Which have to be assigned to specific User 
+
 ## **Roles**
+Group OF Authorities can be added for particular set of people which is Known AS roles.
 
 
+
+# What Is Ldap
+
+LDAP stands for Lightweight Directory Access Protocol. As the name suggests, it is a lightweight client-server protocol for accessing directory services .
+LDAP directory servers are often used as an authentication repository, and are often used to store sensitive information like passwords and other account details.
+
+# Why Ldap
+The best part about using LDAP is that it is a well-defined protocol. Unlike the NoSQL database or RDBMS, LDAP is explicitly specified how clients should encode requests. When using the alternative technologies like NoSQL database, you’re you are likely to lock yourself into that one type of database as this has its protocol.
+ 
 # Setup LDAP
+
+* Add dependencies to the pom.xml
 ```
-3 dependancies 
 
 <!--Local ldap server--!>
 <dependency>
