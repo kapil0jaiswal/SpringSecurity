@@ -1,10 +1,26 @@
 # Spring security 
 
 Spring Security is a powerful and highly customizable authentication and access-control framework. 
+
 It is the de-facto standard for securing Spring-based applications.
+
 Spring Security is a framework that focuses on providing both authentication and authorization to Java applications. 
+
 the real power of Spring Security is found in how easily it can be extended to meet custom requirements
 with the help of Spring Dependencies
+
+Many comprehensive technologies can be added with minimal configuration and adding dependencies
+
+ # Features
+Comprehensive and extensible support for both Authentication and Authorization
+
+Protection against attacks like session fixation, clickjacking, cross site request forgery, etc
+
+Servlet API integration
+
+Optional integration with Spring Web MVC
+
+Much more…
 
 It Handles Common Vulnerbality out of the box
 
@@ -15,7 +31,7 @@ It Handles Common Vulnerbality out of the box
 
 ## what can be done
 
--  username/pswd authentication
+- username/pswd authentication
 - SSO like okta or LDAP
 - App level Authorization
 - OAuth 
@@ -90,3 +106,16 @@ The best part about using LDAP is that it is a well-defined protocol. Unlike the
 </dependency>
 
 ```
+configure properties
+
+spring.ldap.embedded.ldif=classpath:test-server.ldif
+spring.ldap.embedded.base-dn=dc=springframework,dc=org
+spring.ldap.embedded.port=8389
+
+and test-server.ldif file
+
+https://spring.io/guides/gs/authenticating-ldap/
+
+https://github.com/kapil0jaiswal/SpringSecurity
+
+benspassword
